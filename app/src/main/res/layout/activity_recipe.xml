@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_recipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    android:background="#f2f2f2"
+    tools:context="com.appcook.user.letscookapp.Controllers.RecipeActivity">
+
+    <TextView
+        android:id="@+id/tvRtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp" />
+    <View
+        android:id="@+id/fline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvRtitle"
+        android:background="@android:color/black" />
+    <ImageView
+        android:id="@+id/ivRimpath"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/fline"
+        android:paddingTop="50dp" />
+
+    <TextView
+        android:id="@+id/tvYlika"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivRimpath"
+        android:text="@string/recipe_tvYlika"
+        android:textStyle="bold"
+        android:paddingTop="50dp"
+        android:textSize="18sp"/>
+    <View
+        android:id="@+id/sline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvYlika"
+        android:background="@android:color/black" />
+
+    <org.sufficientlysecure.htmltextview.HtmlTextView
+        android:id="@+id/html_textRmdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:layout_below="@id/sline"
+        android:paddingTop="10dp"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tvPerigrafi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/html_textRmdesc"
+        android:text="@string/recipe_tvPerigrafi"
+        android:textStyle="bold"
+        android:paddingTop="50dp"
+        android:textSize="18sp"/>
+    <View
+        android:id="@+id/thline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvPerigrafi"
+        android:background="@android:color/black" />
+
+    <org.sufficientlysecure.htmltextview.HtmlTextView
+        android:id="@+id/html_textRsteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:layout_below="@id/thline"
+        android:paddingTop="10dp"
+        android:textSize="18dp" />
+
+</RelativeLayout>
