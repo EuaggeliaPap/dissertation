@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/TVloginDescr"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="80dp"
+        android:textSize="20sp"
+        android:text="Press your user name and your password!!!"
+        android:textStyle="bold"
+        android:padding="6dp"
+        />
+    <EditText
+        android:id="@+id/ETusername"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="150dp"
+        android:hint="Email"
+        android:padding="6dp"
+        />
+    <EditText
+        android:id="@+id/ETpassword"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="200dp"
+        android:hint="Password"
+        android:padding="6dp"
+        />
+    <Button
+        android:id="@+id/Blogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/myblue"
+        android:textColor="@color/brokewhite"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="100dp"
+        android:text="Login"
+        android:padding="6dp"
+        />
+
+    <Button
+        android:id="@+id/btnforgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:textAllCaps="false"
+        android:text="@string/login_forgotPassword"
+        android:autoLink="all"
+        android:textColor="@color/myblue"
+        android:layout_below="@+id/Blogin"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="100dp"/>
+
+    <Button
+        android:id="@+id/btnsignin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:textAllCaps="false"
+        android:text="@string/login_signin"
+        android:textColor="@color/myblue"
+        android:layout_below="@+id/btnforgotPassword"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="100dp"/>
+
+</RelativeLayout>
+

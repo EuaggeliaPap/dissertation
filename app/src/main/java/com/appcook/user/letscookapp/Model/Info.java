@@ -1,5 +1,7 @@
 package com.appcook.user.letscookapp.Model;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties
 public abstract class Info {
     private String description;
     private String email;

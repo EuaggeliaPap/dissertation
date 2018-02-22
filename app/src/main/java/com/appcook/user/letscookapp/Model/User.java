@@ -19,8 +19,7 @@ public abstract class User {
     private List<Category> category;
 
     public User() {
-        this.uemail = "";
-        this.category = new ArrayList<>();
+         this.category = new ArrayList<>();
     }
 
     public String getUemail() {

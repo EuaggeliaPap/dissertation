@@ -25,7 +25,7 @@ public class SubCategoriesActivity extends AppCompatActivity {
         list = (ListView) findViewById(R.id.LVScategories);
         positionC = getIntent().getIntExtra("CATEGORY_POSITION", 0);
 
-        subCategories = glApp.simpleUser.getCategory().get(positionC).getSubcategory();
+        subCategories = glApp.user.getCategory().get(positionC).getSubcategory();//----
         adapter = new CustomListAdapter(SubCategoriesActivity.this, R.layout.item_of_list, subCategories);
         list.setAdapter(adapter);
     }

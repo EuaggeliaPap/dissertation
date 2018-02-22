@@ -12,11 +12,14 @@ import android.widget.Button;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.appcook.user.letscookapp.Model.SimpleUser;
 import com.appcook.user.letscookapp.Model.User;
 import com.appcook.user.letscookapp.R;
 import com.appcook.user.letscookapp.Services.GetJson;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.rahatarmanahmed.cpv.CircularProgressView;
+
+import static com.appcook.user.letscookapp.Controllers.UserGlobalApplication.overlayDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void initGlApp(){
         glApp.progressView = (CircularProgressView) findViewById(R.id.progress_view);
-        glApp.overlayDialog = new Dialog(MainActivity.this , android.R.style.Theme_Panel);
-        glApp.overlayDialog.setCancelable(false);
+        overlayDialog = new Dialog(MainActivity.this , android.R.style.Theme_Panel);
+        overlayDialog.setCancelable(false);
     }
 
     private void initXml(){
@@ -59,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
             butuser.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Toast.makeText(MainActivity.this, getString(R.string.Under_Construction), Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent);
                 }
             });
 
@@ -68,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     if(glApp.isNetworkAvailable()) {
                         glApp.progressView.setVisibility(View.VISIBLE);
                         glApp.progressView.startAnimation();
+                        glApp.overlayDialog.show();
                         updateUserGlobalApplication(false);
                     }else{
                         Toast.makeText(MainActivity.this, getString(R.string.Network_Connection_Problem), Toast.LENGTH_LONG).show();
@@ -84,19 +89,20 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     String jstrForMapping;
                     ObjectMapper mapper = new ObjectMapper();
-                    GetJson jsonGetter = new GetJson("http://192.168.1.3:8081/allforguest");
+                    GetJson jsonGetter = new GetJson("http://192.168.17.156:8081/allforguest");
                     jstrForMapping = jsonGetter.useJsonString("");
 
-                    glApp.simpleUser = mapper.readValue(jstrForMapping, User.class);
+                    glApp.user = new SimpleUser();
+                    glApp.user = mapper.readValue(jstrForMapping, User.class);
                 } catch (Exception ex) {
-                    Toast.makeText(MainActivity.this, getString(R.string.Fetc_Data_Problem), Toast.LENGTH_LONG).show();
+                    //Toast.makeText(MainActivity.this, getString(R.string.Fetc_Data_Problem), Toast.LENGTH_LONG).show();
                     ex.printStackTrace();
                 }finally {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             glApp.progressView.setVisibility(View.GONE);
-                            glApp.overlayDialog.cancel();
+                            overlayDialog.cancel();
                             if(!isForTest){
                                 Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
                                 startActivity(intent);

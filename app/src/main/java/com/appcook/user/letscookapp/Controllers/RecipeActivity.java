@@ -37,10 +37,10 @@ public class RecipeActivity extends Activity {
         positionS = getIntent().getIntExtra("S_POSITION", 0);
         positionR = getIntent().getIntExtra("R_POSITION", 0);
 
-        title.setText(((SubCategory)glApp.simpleUser.getCategory().get(positionC).getSubcategory().get(positionS)).getRecipe().get(positionR).getRtitle());
-        mdesc.setHtml(((SubCategory)glApp.simpleUser.getCategory().get(positionC).getSubcategory().get(positionS)).getRecipe().get(positionR).getMdesc());
-        steps.setHtml(((SubCategory)glApp.simpleUser.getCategory().get(positionC).getSubcategory().get(positionS)).getRecipe().get(positionR).getSteps());
-        Glide.with(RecipeActivity.this).load(((SubCategory)glApp.simpleUser.getCategory().get(positionC).getSubcategory().get(positionS)).getRecipe().get(positionR).getRimpath()).into(image);
+        title.setText(((SubCategory)glApp.user.getCategory().get(positionC).getSubcategory().get(positionS)).getRecipe().get(positionR).getRtitle());//--
+        mdesc.setHtml(((SubCategory)glApp.user.getCategory().get(positionC).getSubcategory().get(positionS)).getRecipe().get(positionR).getMdesc());
+        steps.setHtml(((SubCategory)glApp.user.getCategory().get(positionC).getSubcategory().get(positionS)).getRecipe().get(positionR).getSteps());
+        Glide.with(RecipeActivity.this).load(((SubCategory)glApp.user.getCategory().get(positionC).getSubcategory().get(positionS)).getRecipe().get(positionR).getRimpath()).into(image);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)

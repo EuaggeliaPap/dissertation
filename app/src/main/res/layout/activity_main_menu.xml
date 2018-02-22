@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFF0"
+    tools:context=".Controllers.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/Llayoutmma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:background="@color/lightgray">
+        <Button
+            android:id="@+id/bcategoriesmma"
+            android:layout_width="5dp"
+            android:layout_height="62dp"
+            android:layout_weight="1"
+            android:text="categories"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/myblue"
+            android:textColor="@color/lightgray"/>
+        <Button
+            android:id="@+id/bfaqsmma"
+            android:layout_width="5dp"
+            android:layout_height="62dp"
+            android:layout_weight="1"
+            android:text="Faqs"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="1.5dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/myblue"
+            android:textColor="@color/lightgray"/>
+        <Button
+            android:id="@+id/binfomma"
+            android:layout_width="5dp"
+            android:layout_height="62dp"
+            android:layout_weight="1"
+            android:text="info"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="1.5dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/myblue"
+            android:textColor="@color/lightgray"/>
+        <Button
+            android:id="@+id/bprofilemma"
+            android:layout_width="5dp"
+            android:layout_height="62dp"
+            android:layout_weight="1"
+            android:text="profile"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="1.5dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/myblue"
+            android:textColor="@color/lightgray"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/Llayoutrecipemma"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@+id/Llayoutmma"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:background="@color/lightgray"
+        android:clickable="true">
+        <ImageView
+            android:id="@+id/ivthisrec"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tvthisrecipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="80dp"
+            android:background="#80000066"
+            android:padding="40dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="3dp"
+            android:text="Προτεινόμενη συνταγή για εσάς..."
+            android:textColor="@color/brokewhite"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

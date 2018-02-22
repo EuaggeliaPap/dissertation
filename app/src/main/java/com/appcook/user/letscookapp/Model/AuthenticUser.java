@@ -1,10 +1,13 @@
 package com.appcook.user.letscookapp.Model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AuthenticUser extends User{
 
     private String password;
     private Profile profile;
-    private FAQs faqs;
+    private List<FAQs> faqs;
     private Info cookInf;
     private Info appInf;
     //private Favorite favor;
@@ -13,7 +16,7 @@ public class AuthenticUser extends User{
     public AuthenticUser() {
         this.password = "";
         this.profile = new Profile();
-        this.faqs = new FAQs();
+        this.faqs = new ArrayList<>();
         this.cookInf = new CookerInfo();
         this.appInf = new AppInfo();
     }
@@ -34,11 +37,11 @@ public class AuthenticUser extends User{
         this.profile = profile;
     }
 
-    public FAQs getFaqs() {
+    public List<FAQs> getFaqs() {
         return faqs;
     }
 
-    public void setFaqs(FAQs faqs) {
+    public void setFaqs(List<FAQs> faqs) {
         this.faqs = faqs;
     }
 

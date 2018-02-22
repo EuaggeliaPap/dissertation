@@ -4,14 +4,14 @@ public class Profile {
 
     private String fname;
     private String lname;
-    private String email;
+    //private String email;
     //private String icon;
 
 
     public Profile() {
         this.fname = "";
         this.lname = "";
-        this.email = "";
+        //this.email = "";
     }
 
     public String getFname() {
@@ -30,20 +30,20 @@ public class Profile {
         this.lname = lname;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
+//    public String getEmail() {
+//        return email;
+//    }
+//
+//    public void setEmail(String email) {
+//        this.email = email;
+//    }
 
     @Override
     public String toString() {
         return "Profile{" +
                 "fname='" + fname + '\'' +
                 ", lname='" + lname + '\'' +
-                ", email='" + email + '\'' +
+                //", email='" + email + '\'' +
                 '}';
     }
 }

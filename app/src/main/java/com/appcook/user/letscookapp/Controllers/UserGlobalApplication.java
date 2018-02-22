@@ -13,14 +13,16 @@ import com.github.rahatarmanahmed.cpv.CircularProgressView;
 
 public class UserGlobalApplication extends Application {
 
-    public User simpleUser;
-    public User authenticUser;
+//    public User simpleUser;
+//    public User authenticUser;
+    public User user;
     public static CircularProgressView progressView;
     public static Dialog overlayDialog;
 
     public UserGlobalApplication() {
-        this.simpleUser = new SimpleUser();
-        this.authenticUser = new AuthenticUser();
+//        this.simpleUser = new SimpleUser();
+//        this.authenticUser = new AuthenticUser();
+        this.user = null;
     }
 
     public boolean isNetworkAvailable() {
@@ -33,8 +35,15 @@ public class UserGlobalApplication extends Application {
     @Override
     public String toString() {
         return "UserGlobalApplication{" +
-                "simpleUser=" + simpleUser +
-                ", authenticUser=" + authenticUser +
+                "user=" + user +
                 '}';
     }
+
+    //    @Override
+//    public String toString() {
+//        return "UserGlobalApplication{" +
+//                "simpleUser=" + simpleUser +
+//                ", authenticUser=" + authenticUser +
+//                '}';
+//    }
 }

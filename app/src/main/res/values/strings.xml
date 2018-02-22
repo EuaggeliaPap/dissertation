@@ -1,16 +1,22 @@
 <resources>
     <string name="app_name">Lets Cook</string>
+
+    //-----------------------------------Layouts----------------------------------------------------
     <string name="main_blogin">Login As User</string>
     <string name="main_bguest">Login As Guest</string>
     <string name="recipe_tvYlika">Υλικά</string>
     <string name="recipe_tvPerigrafi">Περιγραφή</string>
     <string name="CustomListAdapterCatDesc">Ειναι κατηγορία που έχει υποκατηγορίες </string>
     <string name="CustomListAdapterSubCatDesc">Ειναι υποκατηγορία που έχει συνταγες όπως </string>
+    <string name="login_forgotPassword">Ξεχάσατε τον κωδικό σας?</string>
+    <string name="login_signin">Δεν έχετε λογαριασμό?</string>
+
     <string name="mainA_model">SM-T537V</string>
     <string name="Under_Construction">Under Construction</string>
     <string name="Fetc_Data_Problem">Problem while fetching the data</string>
     <string name="Network_Connection_Problem">You need network connection</string>
 
+    //-------------------------------setInfo(LoginActivity)-----------------------------------------
 
 
 </resources>

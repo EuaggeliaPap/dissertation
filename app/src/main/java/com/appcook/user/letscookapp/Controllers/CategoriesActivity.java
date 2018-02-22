@@ -18,7 +18,7 @@ public class CategoriesActivity extends AppCompatActivity {
 
     private void initXml(){
         list = (ListView) findViewById(R.id.LVcategories);
-        adapter = new CustomListAdapter(CategoriesActivity.this, R.layout.item_of_list, glApp.simpleUser.getCategory());
+        adapter = new CustomListAdapter(CategoriesActivity.this, R.layout.item_of_list, glApp.user.getCategory());//----
         list.setAdapter(adapter);
     }
 

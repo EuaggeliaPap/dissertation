@@ -40,7 +40,7 @@ public class MainActivityTest{
     public void mainActivityFetchData() throws InterruptedException {
         rule.getActivity().updateUserGlobalApplication(true);
         Thread.sleep(3000);
-        userTemp = (SimpleUser) MainActivity.glApp.simpleUser;
+        userTemp = (SimpleUser) MainActivity.glApp.user;
         categories();
         subCategories();
         listOfRecipes();

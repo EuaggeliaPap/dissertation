@@ -29,7 +29,7 @@ public class ListOfRecipesActivity extends AppCompatActivity {
         positionC = getIntent().getIntExtra("CATEGORY_POSITION", 0);
         positionS = getIntent().getIntExtra("SCATEGORY_POSITION", 0);
 
-        recipes = ((SubCategory)glApp.simpleUser.getCategory().get(positionC).getSubcategory().get(positionS)).getRecipe();
+        recipes = ((SubCategory)glApp.user.getCategory().get(positionC).getSubcategory().get(positionS)).getRecipe();//----
         adapter = new RecipeAdapter(ListOfRecipesActivity.this, R.layout.item_of_list, recipes);
         list.setAdapter(adapter);
     }

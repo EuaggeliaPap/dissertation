@@ -4,12 +4,12 @@ public class FAQs {
 
     private  int qid;
     private String qtitle;
-    private String answer;
+    private String qanswer;
 
     public FAQs() {
         this.qid = 0;
         this.qtitle = "";
-        this.answer = "";
+        this.qanswer = "";
     }
 
     public int getQid() {
@@ -28,12 +28,12 @@ public class FAQs {
         this.qtitle = qtitle;
     }
 
-    public String getAnswer() {
-        return answer;
+    public String getQanswer() {
+        return qanswer;
     }
 
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void setQanswer(String qanswer) {
+        this.qanswer = qanswer;
     }
 
     @Override
@@ -41,7 +41,7 @@ public class FAQs {
         return "FAQs{" +
                 "qid=" + qid +
                 ", qtitle='" + qtitle + '\'' +
-                ", answer='" + answer + '\'' +
+                ", qanswer='" + qanswer + '\'' +
                 '}';
     }
 }
